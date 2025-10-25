@@ -21,8 +21,9 @@ npm run dev
 Open the dev server URL printed by Vite (usually http://localhost:5173).
 
 Notes and next steps:
-- Add a Map View with `react-leaflet`, clustered markers, and color-coded pins.
-- Wire CSV import using `papaparse` to preview and batch insert records.
-- Integrate email/SMS notifications via a provider (e.g., Twilio, SendGrid).
-- Connect action buttons to a real backend API for persistence.
-- Add automated tests (React Testing Library) and CI workflows to guard builds.
+- [x] Scaffold core dashboard layout with overview cards, table, alerts, and upload placeholder.
+- [ ] Add a Map View with `react-leaflet`, clustered markers, and color-coded pins.
+- [ ] Wire CSV import using `papaparse` to preview and batch insert records.
+- [ ] Integrate email/SMS notifications via a provider (e.g., Twilio, SendGrid).
+- [ ] Connect action buttons to a real backend API for persistence.
+- [ ] Add automated tests (React Testing Library) and CI workflows to guard builds.
