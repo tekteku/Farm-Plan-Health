@@ -1,0 +1,27 @@
+[
+  {
+    "id": "p-001",
+    "name": "Tomato A1",
+    "type": "Tomato",
+    "location": { "lat": 34.0522, "lng": -118.2437 },
+    "health": "healthy",
+    "lastChecked": "2025-10-20T09:15:00Z",
+    "notes": "Growing well."
+  },
+  {
+    "id": "p-002",
+    "name": "Corn B3",
+    "type": "Corn",
+    "location": { "lat": 34.0523, "lng": -118.2430 },
+    "health": "unhealthy",
+    "lastChecked": "2025-10-24T13:40:00Z",
+    "notes": "Yellowing leaves; needs inspection."
+  },
+  {
+    "id": "p-003",
+    "name": "Lettuce C2",
+    "type": "Lettuce",
+    "health": "healthy",
+    "lastChecked": "2025-10-22T08:00:00Z"
+  }
+]
