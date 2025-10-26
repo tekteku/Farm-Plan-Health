@@ -1,0 +1,51 @@
+body {
+  font-family: "Inter", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* Design tokens */
+  --bg-start: #e9f5ef;
+  --bg-mid: #f7f9fb;
+  --bg-end: #ffffff;
+  --primary: #2d6a4f;
+  --secondary: #40916c;
+  --text-primary: #173f2f;
+  --muted: #6b7a6f;
+  --card-bg: rgba(255,255,255,0.85);
+
+  background: radial-gradient(circle at top left, var(--bg-start) 0%, var(--bg-mid) 55%, var(--bg-end) 100%);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Utility glass/card class for non-MUI elements or for future use */
+.glass-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid rgba(16,24,20,0.05);
+  box-shadow: 0 8px 24px rgba(15,23,24,0.06);
+  backdrop-filter: blur(6px);
+}
+
+/* Headings spacing */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 8px 0;
+  color: var(--text-primary);
+}
+
+/* Responsive container padding (keeps layout airy on mobile) */
+.container-responsive {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Make images feel consistent */
+img {
+  max-width: 100%;
+  height: auto;
+}

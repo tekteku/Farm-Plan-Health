@@ -1,0 +1,34 @@
+{
+  "name": "farm-plant-health-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^5.14.0",
+    "@mui/material": "^5.18.0",
+    "@types/qrcode.react": "^1.0.5",
+    "@types/react-speech-recognition": "^3.9.6",
+    "axios": "^1.4.0",
+    "papaparse": "^5.4.1",
+    "qrcode.react": "^4.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-dropzone": "^14.3.8",
+    "react-router-dom": "^7.9.4",
+    "react-speech-recognition": "^4.0.1",
+    "recharts": "^2.6.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.1.0",
+    "typescript": "^5.5.0",
+    "vite": "^5.0.0"
+  }
+}

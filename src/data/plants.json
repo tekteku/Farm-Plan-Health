@@ -1,0 +1,127 @@
+[
+  {
+    "id": "p-001",
+    "name": "Tomato A1",
+    "type": "Tomato",
+    "location": { "lat": 34.0522, "lng": -118.2437 },
+    "health": "healthy",
+    "lastChecked": "2025-10-20T09:15:00Z",
+    "notes": "Vibrant growth, no signs of pests."
+  },
+  {
+    "id": "p-002",
+    "name": "Corn B3",
+    "type": "Corn",
+    "location": { "lat": 34.0523, "lng": -118.2430 },
+    "health": "unhealthy",
+    "lastChecked": "2025-10-24T13:40:00Z",
+    "notes": "Yellowing leaves; suspected nitrogen deficiency. Needs inspection."
+  },
+  {
+    "id": "p-003",
+    "name": "Lettuce C2",
+    "type": "Lettuce",
+    "health": "healthy",
+    "lastChecked": "2025-10-22T08:00:00Z",
+    "notes": "Crisp leaves, good color."
+  },
+  {
+    "id": "p-004",
+    "name": "Basil A2",
+    "type": "Basil",
+    "location": { "lat": 34.0522, "lng": -118.2436 },
+    "health": "healthy",
+    "lastChecked": "2025-10-20T09:15:00Z",
+    "notes": "Planted near tomatoes to deter pests. Very aromatic."
+  },
+  {
+    "id": "p-005",
+    "name": "Carrot D1",
+    "type": "Carrot",
+    "health": "healthy",
+    "lastChecked": "2025-10-23T11:00:00Z",
+    "notes": "Strong top growth."
+  },
+  {
+    "id": "p-006",
+    "name": "Onion D2",
+    "type": "Onion",
+    "health": "needs-check",
+    "lastChecked": "2025-10-23T11:05:00Z",
+    "notes": "Slightly wilted tops, could be overwatering or pest."
+  },
+  {
+    "id": "p-007",
+    "name": "Marigold M1",
+    "type": "Marigold",
+    "health": "healthy",
+    "lastChecked": "2025-10-25T10:20:00Z",
+    "notes": "In full bloom, acting as a natural pest repellent for the plot."
+  },
+  {
+    "id": "p-008",
+    "name": "Bush Bean E1",
+    "type": "Bean",
+    "location": { "lat": 34.0524, "lng": -118.2431 },
+    "health": "healthy",
+    "lastChecked": "2025-10-24T09:00:00Z",
+    "notes": "Fixing nitrogen in the soil, benefiting nearby corn."
+  },
+  {
+    "id": "p-009",
+    "name": "Zucchini F1",
+    "type": "Squash",
+    "health": "healthy",
+    "lastChecked": "2025-10-25T14:00:00Z",
+    "notes": "Producing well, no sign of powdery mildew."
+  },
+  {
+    "id": "p-010",
+    "name": "Cucumber G1",
+    "type": "Cucumber",
+    "health": "unhealthy",
+    "lastChecked": "2025-10-25T14:05:00Z",
+    "notes": "Aphid infestation detected on the underside of leaves."
+  },
+  {
+    "id": "p-011",
+    "name": "Bell Pepper H1",
+    "type": "Pepper",
+    "health": "healthy",
+    "lastChecked": "2025-10-21T16:30:00Z",
+    "notes": "Fruit is setting well."
+  },
+  {
+    "id": "p-012",
+    "name": "Radish C3",
+    "type": "Radish",
+    "health": "healthy",
+    "lastChecked": "2025-10-22T08:05:00Z",
+    "notes": "Fast-growing, planted between lettuce rows."
+  },
+  {
+    "id": "p-013",
+    "name": "Spinach C4",
+    "type": "Spinach",
+    "health": "needs-check",
+    "lastChecked": "2025-10-22T08:10:00Z",
+    "notes": "Some holes in leaves, possible caterpillar damage."
+  },
+  {
+    "id": "p-014",
+    "name": "Strawberry J1",
+    "type": "Strawberry",
+    "location": { "lat": 34.0525, "lng": -118.2435 },
+    "health": "healthy",
+    "lastChecked": "2025-10-23T15:00:00Z",
+    "notes": "Runners are establishing well."
+  },
+  {
+    "id": "p-015",
+    "name": "Borage B1",
+    "type": "Borage",
+    "health": "healthy",
+    "lastChecked": "2025-10-24T09:05:00Z",
+    "notes": "Attracting a large number of bees, excellent for pollination."
+  }
+]
