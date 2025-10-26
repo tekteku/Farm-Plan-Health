@@ -32,6 +32,7 @@ A comprehensive farm intelligence platform featuring AI-powered plant diagnosis 
 
 ### Prerequisites
 - Node.js (>= 18 recommended)
+- Supabase account (free tier) - [Sign up here](https://supabase.com)
 
 ### Installation
 
@@ -40,19 +41,29 @@ A comprehensive farm intelligence platform featuring AI-powered plant diagnosis 
 npm install
 ```
 
-2. **Start the development server:**
+2. **Set up Supabase** (Optional - uses mock data by default):
+   - Follow the detailed guide in `SUPABASE_SETUP.md`
+   - Quick steps:
+     - Create a Supabase project
+     - Run `supabase-schema.sql` in SQL Editor
+     - Create `plant-photos` storage bucket
+     - Copy credentials to `.env` file
+
+3. **Start the development server:**
 ```powershell
 npm run dev
 ```
 
-3. **Open in browser:**
+4. **Open in browser:**
    - Navigate to http://localhost:5173 (or the port shown in terminal)
 
 ### Project Structure
 ```
 src/
 ├── api/
-│   └── mockApi.ts           # Mock API endpoints including uploadImages()
+│   ├── mockApi.ts           # Mock API endpoints (for development)
+│   ├── supabaseClient.ts    # Supabase client configuration
+│   └── supabaseApi.ts       # Real API using Supabase
 ├── components/
 │   ├── DataUpload.tsx       # Photo upload with drag-and-drop
 │   ├── AIDiagnosisModal.tsx # AI diagnosis display with photos
@@ -143,6 +154,7 @@ Returns an array of uploaded file metadata with URLs.
 - **Framework**: React 18 + TypeScript
 - **Build Tool**: Vite 5
 - **UI Library**: Material-UI (MUI) v5
+- **Backend**: Supabase (PostgreSQL + Storage + Auth)
 - **File Upload**: react-dropzone
 - **Charts**: Recharts
 - **Routing**: React Router v7
