@@ -47,7 +47,7 @@ export default function DataUpload() {
     setUploading(true);
     setUploadSuccess(false);
     try {
-      const uploadedFiles = await uploadImages(files);
+      const uploadedFiles = await uploadImages(files, selectedPlantId);
       setUploadSuccess(true);
       
       // Find the selected plant and trigger AI diagnosis
@@ -61,7 +61,7 @@ export default function DataUpload() {
       setSelectedPlantId(''); // Reset plant selection
     } catch (error) {
       console.error('Upload failed:', error);
-      // In a real app, you'd show an error message to the user
+      alert('Upload failed: ' + (error as Error).message);
     } finally {
       setUploading(false);
     }

@@ -4,14 +4,16 @@ import SpaTwoToneIcon from '@mui/icons-material/SpaTwoTone'
 import GrassIcon from '@mui/icons-material/Grass'
 import WarningAmberIcon from '@mui/icons-material/WarningAmber'
 import MicIcon from '@mui/icons-material/Mic';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents'
 import OverviewPanel from './components/OverviewPanel'
 import PlantTable from './components/PlantTable'
 import AlertsPanel from './components/AlertsPanel'
 import DataUpload from './components/DataUpload'
 import AmbientMode from './components/AmbientMode'
 import ProactiveAdvisoryPanel from './components/ProactiveAdvisoryPanel'
-import { fetchPlants } from './api/mockApi'
-import type { Plant } from './types'
+import FarmPerformanceDashboard from './components/FarmPerformanceDashboard'
+import { fetchPlants, fetchFarmPerformanceMetrics } from './api/mockApi'
+import type { Plant, FarmPerformanceMetrics } from './types'
 
 import { useAuth } from './auth'
 import { useNavigate } from 'react-router-dom'
@@ -19,11 +21,14 @@ import { useNavigate } from 'react-router-dom'
 export default function App() {
   const [plants, setPlants] = useState<Plant[]>([])
   const [isAmbientMode, setIsAmbientMode] = useState(false);
+  const [performanceMetrics, setPerformanceMetrics] = useState<FarmPerformanceMetrics | null>(null);
+  const [showPerformance, setShowPerformance] = useState(false);
   const auth = useAuth()
   const navigate = useNavigate()
 
   useEffect(() => {
     fetchPlants().then(setPlants)
+    fetchFarmPerformanceMetrics().then(setPerformanceMetrics)
   }, [])
 
   const handleLogout = () => {
@@ -100,6 +105,16 @@ export default function App() {
                 <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1}>
                   <Chip icon={<GrassIcon />} color="primary" label={`Healthy rate ${metrics.healthyRate}%`} sx={{ fontWeight: 600 }} />
                   <Chip icon={<WarningAmberIcon />} color={metrics.alertCount > 0 ? 'error' : 'success'} label={`${metrics.alertCount} active alerts`} sx={{ fontWeight: 600 }} />
+                  {performanceMetrics && (
+                    <Chip 
+                      icon={<EmojiEventsIcon />} 
+                      color="warning" 
+                      label={`Score: ${performanceMetrics.overallScore}/100`} 
+                      sx={{ fontWeight: 600 }}
+                      onClick={() => setShowPerformance(true)}
+                      clickable
+                    />
+                  )}
                 </Stack>
               </Stack>
               <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1.5} alignItems={{ xs: 'stretch', md: 'center' }} zIndex={1}>
@@ -114,6 +129,19 @@ export default function App() {
               <MetricTile label="Last Check" value={metrics.lastChecked} />
             </Stack>
           </Paper>
+
+          {/* Performance Dashboard Section */}
+          {showPerformance && performanceMetrics && (
+            <Paper sx={{ p: 3 }}>
+              <Stack direction="row" justifyContent="space-between" alignItems="center" sx={{ mb: 3 }}>
+                <Typography variant="h5">Farm Performance Dashboard</Typography>
+                <Button variant="outlined" onClick={() => setShowPerformance(false)}>
+                  Hide
+                </Button>
+              </Stack>
+              <FarmPerformanceDashboard metrics={performanceMetrics} />
+            </Paper>
+          )}
 
           <Grid container spacing={3} alignItems="stretch">
             <Grid item xs={12} lg={8}>

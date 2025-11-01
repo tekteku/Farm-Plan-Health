@@ -1,0 +1,74 @@
+Project Summary as of 2025-10-28
+--------------------------------
+
+Short project summary:
+- Vite + React + TypeScript dashboard (Farm-Plan-Health) now includes a modern photo capture/upload experience.
+- Users can drag-and-drop, capture via mobile camera, preview images, associate them with plants, and trigger a simulated AI diagnosis modal.
+- Mock upload API returns placeholder URLs for local development.
+- Supabase scaffolding (client, API wrappers, SQL schema, storage instructions) is ready for a production backend.
+
+What was implemented:
+- Photo upload UI with drag-and-drop, camera capture, previews, and plant selector.
+- Preview gallery and ability to attach photos to plants.
+- Mock upload API simulating storage with placeholder public URLs.
+- AI diagnosis modal that accepts photos, shows simulated results, confidence, and recommendations.
+- Plant detail view updated with a photo gallery.
+- Supabase client, API wrapper functions, SQL schema, storage setup instructions, and documentation.
+- Documentation suite covering feature details, quick starts, and setup guides.
+- Git repository initialized, commits created, and pushed to https://github.com/tekteku/Farm-Plan-Health.
+
+Files added or edited (highlights):
+- src/components/DataUpload.tsx
+- src/components/AIDiagnosisModal.tsx
+- src/components/PlantDetail.tsx
+- src/api/mockApi.ts
+- src/api/supabaseClient.ts
+- src/api/supabaseApi.ts
+- supabase-schema.sql
+- .env.example
+- PHOTO_UPLOAD_IMPLEMENTATION.md
+- FEATURE_SHOWCASE.md
+- QUICK_START.md
+- IMPLEMENTATION_SUMMARY.md
+- SUPABASE_SETUP.md
+- SUPABASE_QUICKSTART.md
+- README.md (updated)
+- .gitignore (updated)
+
+Current runtime / verification status:
+- Dev server (Vite) launched successfully during development (last run served at http://localhost:5174).
+- TypeScript checks passed after fixing a boolean coercion in AIDiagnosisModal.tsx.
+- Automated tests and linting were not run (not present in the project).
+
+Supabase status and required actions:
+- Supabase client and API wrappers exist in src/api/.
+- supabase-schema.sql defines tables, extensions, and storage instructions.
+- .env.example documents required environment variables.
+- To enable Supabase:
+  1. Create a Supabase project at https://app.supabase.com.
+  2. Run supabase-schema.sql in the Supabase SQL editor.
+  3. Create a storage bucket named plant-photos (or adjust code to match a different name).
+  4. Add Supabase URL and anon key to a local .env (never commit this file).
+  5. Switch front-end imports from mockApi to supabaseApi and restart the dev server.
+
+Recommended next steps:
+- Switch to Supabase API and verify end-to-end uploads with real credentials.
+- Add client-side image compression, EXIF handling, and per-file upload progress.
+- Implement offline queueing, retry/backoff, and production-ready RLS/auth policies.
+- Add automated tests (unit/integration/E2E) for upload flow and Supabase API usage.
+- Integrate a real ML/AI diagnosis service if desired.
+
+Edge cases / assumptions:
+- Mobile capture depends on the browser honoring the capture attribute; some devices may differ.
+- Photos currently use public URLs; use signed URLs if privacy is required.
+- No client-side compression yet; large images may slow uploads or exceed quotas.
+
+Local testing instructions:
+- Install dependencies, run the Vite dev server, and use the Data Upload panel to drag files or capture photos.
+- With mockApi (default), uploads return placeholder URLs and trigger the simulated AI modal.
+- With Supabase enabled and supabaseApi imported, uploads go to the Supabase storage bucket and records enter the photos table.
+
+Completion summary:
+- Modern photo upload flow implemented and integrated with AI diagnosis UI and plant gallery.
+- Supabase backend scaffolding and documentation delivered.
+- Repository updated and pushed with all changes and guides for future work.

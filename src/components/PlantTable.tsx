@@ -19,16 +19,19 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 import type { Plant } from '../types'
 import AIDiagnosisModal from './AIDiagnosisModal'
 import HarvestModal from './HarvestModal'
+import PlantDetail from './PlantDetail'
 
 export default function PlantTable({ plants }: { plants: Plant[] }) {
   const [q, setQ] = useState('')
   const [selectedForDiagnosis, setSelectedForDiagnosis] = useState<Plant | null>(null)
   const [selectedForHarvest, setSelectedForHarvest] = useState<Plant | null>(null)
+  const [selectedForDetail, setSelectedForDetail] = useState<Plant | null>(null)
 
   const healthStatusLabel: Record<Plant['health'], string> = {
     healthy: 'Healthy',
     'needs-check': 'Needs Check',
     unhealthy: 'Unhealthy',
+    unknown: 'Unknown',
   };
 
   const filtered = useMemo(() => {
@@ -42,6 +45,8 @@ export default function PlantTable({ plants }: { plants: Plant[] }) {
   const handleRowClick = (plant: Plant) => {
     if (plant.health !== 'healthy') {
       setSelectedForDiagnosis(plant);
+    } else {
+      setSelectedForDetail(plant);
     }
   };
 
@@ -99,7 +104,7 @@ export default function PlantTable({ plants }: { plants: Plant[] }) {
                 <TableRow
                   key={plant.id}
                   hover
-                  sx={{ cursor: plant.health !== 'healthy' ? 'pointer' : 'default' }}
+                  sx={{ cursor: 'pointer' }}
                   onClick={() => handleRowClick(plant)}
                 >
                   <TableCell>
@@ -138,6 +143,7 @@ export default function PlantTable({ plants }: { plants: Plant[] }) {
 
       <AIDiagnosisModal plant={selectedForDiagnosis} open={!!selectedForDiagnosis} onClose={() => setSelectedForDiagnosis(null)} />
       <HarvestModal plant={selectedForHarvest} open={!!selectedForHarvest} onClose={() => setSelectedForHarvest(null)} />
+      {selectedForDetail && <PlantDetail plant={selectedForDetail} onClose={() => setSelectedForDetail(null)} />}
     </Stack>
   )
 }

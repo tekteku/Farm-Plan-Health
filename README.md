@@ -1,10 +1,36 @@
 # Farm Plant Health Dashboard (Frontend)
 
-A comprehensive farm intelligence platform featuring AI-powered plant diagnosis through photo analysis, real-time monitoring, and proactive health management.
+A comprehensive farm intelligence platform featuring AI-powered plant diagnosis through photo analysis, real-time monitoring, proactive health management, and gamified performance tracking.
 
 ## 🌟 Key Features
 
-### 📸 Photo Upload & AI Diagnosis (NEW!)
+### 🏆 Farm Performance Dashboard (NEW!)
+- **Overall Farm Score**: 0-100 scoring system with weekly letter grades (A+ to F)
+- **Achievement Badges**: Earn badges for milestones
+  - �️ Early Bird: Catch issues before they become critical
+  - ⭐ Green Thumb: Maintain 90%+ health for 30 days
+  - 📸 Documenter: Upload 50+ diagnostic photos
+  - 🔥 Hot Streak: Monitor farm daily for 30 consecutive days
+  - And more with progress tracking!
+- **ROI Metrics**: See tangible value
+  - Cost saved through early detection
+  - Estimated yield improvements
+  - Time efficiency gains
+- **Performance Insights**: Track trends week-over-week
+  - Health improvement percentages
+  - Average response time to issues
+  - Prevention success rate
+
+### 📈 Plant Health Timeline (NEW!)
+- **Visual Health Journey**: See plant recovery over time with photo comparisons
+- **Before/After Slider**: Compare snapshots side-by-side
+- **AI Health Scoring**: Track health scores from 0-100%
+- **Treatment Tracking**: Log applied treatments and see their effectiveness
+- **Sensor Integration**: View temperature, humidity, and soil moisture trends
+- **Progress Metrics**: Calculate improvement percentages and recovery time
+- **Export-Ready Reports**: Share success stories with data-backed evidence
+
+### 📸 Photo Upload & AI Diagnosis
 - **Multi-platform Image Capture**: Upload photos from any device
   - Desktop: Drag-and-drop or file picker
   - Mobile: Direct camera access with `capture="environment"` for rear camera
