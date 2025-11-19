@@ -2,6 +2,34 @@
 
 A comprehensive farm intelligence platform featuring AI-powered plant diagnosis through photo analysis, real-time monitoring, proactive health management, and gamified performance tracking.
 
+## 🌟 Revolutionary UI & AI Mission Control (NEW!)
+
+The dashboard has been completely overhauled with a **revolutionary glassmorphism design** and **AI-driven mission control** capabilities.
+
+### 🚀 Live Command Overview
+- **Glassmorphism Aesthetic**: Modern, high-end UI with gradients, blurs, and semi-transparent layers.
+- **Real-Time Telemetry**: Live monitoring of canopy health, active alerts, and resilience scores.
+- **AI-Driven Insights**:
+  - **Resilience Score**: Predictive metric (0-100) forecasting farm stability over the next 48h.
+  - **Recovery Velocity**: 7-day health trajectory with AI-generated forecasts.
+  - **Climate Pulse**: Sensor-derived environmental data (Moisture, Temp, AQI) with trend indicators.
+  - **Intervention Radar**: Prioritized list of plants requiring immediate attention, sorted by urgency.
+
+### 🧠 Proactive Advisory Panel (AI Copilot)
+- **Scenario Simulation**: Run "what-if" scenarios (e.g., Heat Spike, Humidity Surge) to see potential impacts on crop health.
+- **Operational Queue**: Auto-sorted list of critical tasks with ETAs and severity levels.
+- **Rapid Response Playbooks**: One-click action plans (e.g., "Rapid Rehydration", "Bio-Shield Deploy") synced to AI advice.
+- **Priority Workstreams**: AI-ranked advisories categorized by Opportunity, Efficiency, and Risk.
+
+### 🌿 Immersive Plant Detail
+- **Cinematic Hero Section**: Dynamic gradients based on health status (Healthy, Needs Check, Critical).
+- **AI Narrative**: Natural language summaries of plant health, trends, and recommended actions.
+- **Sensor Pulse**: Real-time visualization of soil moisture, canopy temp, and humidity with optimal band indicators.
+- **Photo Intelligence**: Gallery of diagnostic photos with full-resolution zoom.
+- **Recovery Signals**: Historical snapshot of AI assessments to track improvement over time.
+
+---
+
 ## 🌟 Key Features
 
 ### 🏆 Farm Performance Dashboard (NEW!)
