@@ -26,4 +26,4 @@ Notes and next steps:
 - [ ] Wire CSV import using `papaparse` to preview and batch insert records.
 - [ ] Integrate email/SMS notifications via a provider (e.g., Twilio, SendGrid).
 - [ ] Connect action buttons to a real backend API for persistence.
-- [ ] Add automated tests (React Testing Library) and CI workflows to guard builds.
+- [ ] Add automated tests (React Testing Library) and CI workflows to guard builds.                                                                                                 <img width="1308" height="592" alt="Image" src="https://github.com/user-attachments/assets/34ae493a-e7d4-4c81-9ab5-c67a11ef1c46" />
